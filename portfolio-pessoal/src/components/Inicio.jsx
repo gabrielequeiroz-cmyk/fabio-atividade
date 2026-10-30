@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Inicio() {
   return (
@@ -5,9 +6,11 @@ export default function Inicio() {
       <div className="inicio-conteudo">
         <span className="subtitulo">OLÁ, SEJA BEM-VINDO(A)!</span>
 
+      <Link href="/">
         <h1>
-          Eu sou <span>Gabriele Lima.</span>
+          Eu sou <span>Gabriele Lima</span>
         </h1>
+      </Link>
 
         <h2>Estudante de Informática | Desenvolvedora em formação</h2>
 
@@ -24,13 +27,14 @@ export default function Inicio() {
         </p>
 
         <div className="inicio-botoes">
-          <a href="#projetos" className="btn btn-primario">
-            Ver projetos
-          </a>
-          <a href="#contato" className="btn btn-secundario">
-            Entrar em contato
-          </a>
-        </div>
+  <Link to="/projetos" className="btn btn-primario">
+    Ver projetos
+  </Link>
+
+  <Link to="/contato" className="btn btn-secundario">
+    Entrar em contato
+  </Link>
+</div>
       </div>
 
       <div className="inicio-decoracao" aria-hidden="true">

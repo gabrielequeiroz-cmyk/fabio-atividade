@@ -1,6 +1,6 @@
 
 export default function Contato() {
-  const email = "";
+  const email = "gabriele.queiroz@estudante.ifms.edu.br";
   const github = "https://github.com/gabrielequeiroz-cmyk";
 
   return (
@@ -15,11 +15,13 @@ export default function Contato() {
         <div className="contato-card">
           <span>✉️</span>
           <h3>E-mail</h3>
-          {email ? (
-            <a href={`mailto:${email}`}>{email}</a>
-          ) : (
-            <p>Adicionar e-mail</p>
-          )}
+            <a
+             href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent("Contato pelo Portfólio")}`}
+             target="_blank"
+             rel="noopener noreferrer"
+             >
+              Acessar meu E-mail
+            </a>
         </div>
 
         <div className="contato-card">

@@ -1,24 +1,26 @@
+
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [aberto, setAberto] = useState(false);
 
   const links = [
-    ["Início", "inicio"],
-    ["Sobre", "sobre"],
-    ["Atividades", "atividades"],
-    ["Projetos", "projetos"],
-    ["Eventos", "eventos"],
-    ["Sites", "sites"],
-    ["Habilidades", "habilidades"],
-    ["Contato", "contato"],
+    { nome: "Início", caminho: "/" },
+    { nome: "Sobre", caminho: "/sobre" },
+    { nome: "Atividades", caminho: "/atividades" },
+    { nome: "Projetos", caminho: "/projetos" },
+    { nome: "Eventos", caminho: "/eventos" },
+    { nome: "Sites", caminho: "/sites" },
+    { nome: "Habilidades", caminho: "/habilidades" },
+    { nome: "Contato", caminho: "/contato" },
   ];
 
   return (
     <header className="header">
-      <a href="#inicio" className="logo">
-        Gabi<span>Lima.</span>
-      </a>
+      <NavLink to="/" className="logo">
+        Gabi<span>Lima</span>
+      </NavLink>
 
       <button
         type="button"
@@ -31,14 +33,16 @@ export default function Header() {
       </button>
 
       <nav className={aberto ? "nav ativo" : "nav"}>
-        {links.map(([nome, id]) => (
-          <a
-            key={id}
-            href={`#${id}`}
+        {links.map((link) => (
+          <NavLink
+            key={link.caminho}
+            to={link.caminho}
+            end={link.caminho === "/"}
             onClick={() => setAberto(false)}
+            className={({ isActive }) => isActive ? "link-ativo" : ""}
           >
-            {nome}
-          </a>
+            {link.nome}
+          </NavLink>
         ))}
       </nav>
     </header>

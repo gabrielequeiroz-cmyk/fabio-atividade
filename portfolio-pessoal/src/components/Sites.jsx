@@ -6,7 +6,7 @@ const sites = [
       "Site responsivo com cards NFT, efeitos de hover e animações.",
     imagem: "nft.png",
     tecnologias: ["React", "CSS", "Vite"],
-    github: "https://github.com/gabrielequeiroz-cmyk/portfolio",
+    github: "https://github.com/gabrielequeiroz-cmyk/portifolio-fabio",
     link: "",
   },
   {
@@ -15,7 +15,7 @@ const sites = [
       "Interface web para campanhas e cadastro de usuários.",
     imagem: "ong.png",
     tecnologias: ["HTML", "CSS", "JavaScript"],
-    github: "",
+    github: "https://github.com/felipempaulo/API-ong",
     link: "",
   },
   {
@@ -25,7 +25,7 @@ const sites = [
     imagem: "portfolio.png",
     tecnologias: ["React", "JavaScript", "CSS"],
     github: "",
-    link: "",
+    link: "https://github.com/gabrielequeiroz-cmyk/fabio-atividade",
   },
 ];
 

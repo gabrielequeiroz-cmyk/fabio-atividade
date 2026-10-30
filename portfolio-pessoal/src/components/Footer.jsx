@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <a href="#inicio" className="logo">
-        Gabi<span>Lima.</span>
+        Gabi<span>Lima</span>
       </a>
 
       <p>
